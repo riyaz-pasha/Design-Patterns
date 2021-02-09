@@ -20,7 +20,7 @@ class Cat implements Pet {
 
 class PetFactory {
     constructor() { }
-    getPet(petType) {
+    getPet(petType): Pet {
         if (petType === "Dog") return new Dog();
         return new Cat();
     }
@@ -28,8 +28,8 @@ class PetFactory {
 
 const petFactory = new PetFactory();
 
-const myDog = petFactory.getPet("Dog");
+const myDog: Pet = petFactory.getPet("Dog");
 console.log(myDog.sound());
 
-const myCat = petFactory.getPet("Cat");
+const myCat: Pet = petFactory.getPet("Cat");
 console.log(myCat.sound());
