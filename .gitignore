@@ -53,3 +53,5 @@ hs_err_pid*
 
 design-patterns.iml
 .idea
+out
+.DS_Store
